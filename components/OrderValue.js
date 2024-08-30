@@ -80,7 +80,6 @@ function OrderValue({ data }) {
               )}
             >
               {data?.percentageDifference > 0 ? "+" : "-"}
-              {/* <AnimatedNumber value={saleValue} /> */}
               {Math.abs(data?.percentageDifference)}%
             </p>
           </div>

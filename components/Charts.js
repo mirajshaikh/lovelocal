@@ -43,7 +43,6 @@ function Charts({ data, title, icon }) {
             <div className="flex gap-6 items-center">
               <p className="text-3xl font-medium text-gray-900">
                 <AnimatedNumber value={saleValue} />
-                {/* {new Intl.NumberFormat("en-IN").format(data?.totalSales)} */}
               </p>
 
               <p
@@ -55,7 +54,6 @@ function Charts({ data, title, icon }) {
                 )}
               >
                 {data?.percentageDifference > 0 ? "+" : "-"}
-                {/* <AnimatedNumber value={saleValue} /> */}
                 {Math.abs(data?.percentageDifference)}%
               </p>
             </div>
@@ -94,8 +92,8 @@ function Charts({ data, title, icon }) {
                   stroke="#6366F1"
                   strokeWidth="2px"
                   isAnimationActive={animate}
-                  animationDuration={1500} // Customize the duration of the animation
-                  animationBegin={0} // Delay before the animation starts
+                  animationDuration={1500}
+                  animationBegin={0}
                 />
               </AreaChart>
             </ResponsiveContainer>

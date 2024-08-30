@@ -60,12 +60,12 @@ function Header() {
       <AnimatePresence>
         {isMenuOpen && (
           <motion.div
-            initial={{ x: "-100%" }} // Slide in from the left
-            animate={{ x: 0 }} // Slide to original position
-            exit={{ x: "-100%" }} // Slide out to the left
+            initial={{ x: "-100%" }}
+            animate={{ x: 0 }}
+            exit={{ x: "-100%" }}
             transition={{
-              duration: 0.5, // Adjust the duration of the transition
-              ease: "easeInOut", // Ease transition
+              duration: 0.5,
+              ease: "easeInOut",
             }}
             className="h-screen max-h-screen fixed top-0 left-0 right-0 bottom-0 z-40"
           >
