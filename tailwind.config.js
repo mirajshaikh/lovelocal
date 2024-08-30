@@ -6,11 +6,21 @@ module.exports = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    backgroundImage: {
+      "greeting-banner": "url('../public/bg.png')",
+    },
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      maxWidth: {
+        maxContainer: "1440px",
+      },
+      width: {
+        maxContainer: "1440px",
+      },
+      colors: {
+        sidebar: {
+          bg: "#1E293B",
+          item_bg: "#0F172A",
+        },
       },
     },
   },
