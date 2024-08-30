@@ -4,7 +4,7 @@ import React from "react";
 
 function Sidebar() {
   return (
-    <div className="md:w-64 p-4 bg-sidebar-bg shrink-0 h-screen max-h-screen hidden md:block">
+    <div className="md:w-64 p-4 bg-sidebar-bg shrink-0 h-screen max-h-screen hidden md:block sticky top-0">
       <div className="relative h-9 w-9">
         <Image src="./logo.svg" width={36} height={36} />
       </div>

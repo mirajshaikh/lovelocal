@@ -15,7 +15,7 @@ function Controls() {
           <IoFilter />
         </button>
         <button className="p-2 bg-white border border-[#E2E8F0] rounded-sm">
-          <p className="text-xs font-medium text-[#475569] flex items-center gap-2">
+          <p className="text-[10px] md:text-xs font-medium text-[#475569] flex items-center gap-2">
             <FaRegCalendar className="text-base" />
             OCT 15, 2022 - OCT 31, 2022
           </p>

@@ -8,10 +8,10 @@ function Greeting({ data }) {
   return (
     <div className="w-full bg-greeting-banner p-6 rounded-md bg-cover bg-left">
       <div>
-        <p className="text-2xl md:text-3xl font-medium text-[#1E293B]">
+        <p className="text-xl md:text-3xl font-medium text-[#1E293B]">
           Good afternoon, {data?.name} 👋
         </p>
-        <p className="font-medium text-base text-[#475569]">
+        <p className="font-medium text-sm md:text-base text-[#475569]">
           Here is what’s happening today
         </p>
       </div>

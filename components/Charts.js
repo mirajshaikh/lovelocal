@@ -30,7 +30,7 @@ function Charts({ data, title, icon }) {
   return (
     <>
       {!isLoading ? (
-        <div className="w-full relative bg-white p-4 rounded-sm grid gap-2">
+        <div className="w-full relative bg-white p-4 rounded-sm grid gap-2 shadow-md">
           <div className="flex justify-between items-center">
             <Image src={icon} height={32} alt="Retail Icon" />
             <button>
@@ -81,12 +81,8 @@ function Charts({ data, title, icon }) {
               >
                 <defs>
                   <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="5%" stopColor="#8884d8" stopOpacity={0.3} />
-                    <stop offset="95%" stopColor="#8884d8" stopOpacity={0.3} />
-                  </linearGradient>
-                  <linearGradient id="colorPv" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="5%" stopColor="#82ca9d" stopOpacity={0.8} />
-                    <stop offset="95%" stopColor="#82ca9d" stopOpacity={0} />
+                    <stop offset="5%" stopColor="#6366F1" stopOpacity={0.3} />
+                    <stop offset="95%" stopColor="#6366F1" stopOpacity={0.3} />
                   </linearGradient>
                 </defs>
 
@@ -95,7 +91,7 @@ function Charts({ data, title, icon }) {
                   dataKey="value"
                   //   dataKey="pv"
                   fill="url(#colorUv)"
-                  stroke="#8884d8"
+                  stroke="#6366F1"
                   strokeWidth="2px"
                   isAnimationActive={animate}
                   animationDuration={1500} // Customize the duration of the animation

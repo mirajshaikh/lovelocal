@@ -12,17 +12,19 @@ function Header() {
   const userDetails = dataStore((state) => state.userDetails);
 
   return (
-    <header className="w-full shrink-0 p-4 bg- bg-white flex items-center justify-between">
-      <button
-        className="block md:hidden"
-        onClick={() => setIsMenuOpen(!isMenuOpen)}
-      >
-        {isMenuOpen ? (
-          <IoClose className="text-xl" />
-        ) : (
-          <FiMenu className="text-xl" />
-        )}
-      </button>
+    <header className="w-full shrink-0 p-4 bg- bg-white flex items-center justify-between sticky top-0 z-50 shadow-md">
+      <div className="flex gap-4 items-center md:hidden">
+        <div className="relative h-9 w-9 ">
+          <Image src="/logo-pink.png" width={36} height={36} />
+        </div>
+        <button onClick={() => setIsMenuOpen(!isMenuOpen)}>
+          {isMenuOpen ? (
+            <IoClose className="text-xl" />
+          ) : (
+            <FiMenu className="text-xl" />
+          )}
+        </button>
+      </div>
       <div className="flex justify-end w-full items-center">
         <div className="flex gap-3 *:bg-[#F1F5F9] *:p-2 *:rounded-full justify-end border-r pr-3 mr-3">
           <button>
