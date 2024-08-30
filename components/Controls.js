@@ -8,9 +8,9 @@ function Controls() {
   return (
     <div className="py-8 flex w-full justify-between items-center">
       <button className="h-9 relative">
-        <Image src={teamsImage} height={36} />
+        <Image src={teamsImage} height={30} />
       </button>
-      <div className="flex gap-2 items-center">
+      <div className="flex gap-1 md:gap-2 items-center">
         <button className="p-2 bg-white border border-[#E2E8F0] rounded-sm">
           <IoFilter />
         </button>
