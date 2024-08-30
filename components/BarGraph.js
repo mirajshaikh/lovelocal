@@ -36,7 +36,7 @@ function BarGraph({ data }) {
         <p className="text=[#1E293B] font-semibold">Direct VS Indirect</p>
       </div>
       <hr />
-      <div className="px-4 flex flex-col md:flex-row gap-8">
+      <div className="px-4 flex flex-col md:flex-row gap-4 md:gap-8">
         <div className="flex  gap-5 items-center">
           <div className="flex gap-3 items-center">
             <TbCircleFilled

@@ -6,13 +6,15 @@ import { FaAngleDown } from "react-icons/fa6";
 import { FiMenu } from "react-icons/fi";
 import { IoClose } from "react-icons/io5";
 import { dataStore } from "@/store/data";
+import MobileMenu from "./MobileMenu";
+import { AnimatePresence, motion } from "framer-motion";
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const userDetails = dataStore((state) => state.userDetails);
 
   return (
-    <header className="w-full shrink-0 p-4 bg- bg-white flex items-center justify-between sticky top-0 z-50 shadow-md">
+    <header className="w-full shrink-0 p-4 bg- bg-white flex items-center justify-between sticky top-0 z-30 shadow-md">
       <div className="flex gap-4 items-center md:hidden">
         <div className="relative h-9 w-9 ">
           <Image src="/logo-pink.png" width={36} height={36} />
@@ -32,7 +34,7 @@ function Header() {
           </button>
           <button className="relative">
             {userDetails?.newChat ? (
-              <div className="h-3 w-3 bg-red-600 z-50 rounded-full absolute right-0 top-0 border-2 border-white"></div>
+              <div className="h-3 w-3 bg-red-600 z-30 rounded-full absolute right-0 top-0 border-2 border-white"></div>
             ) : (
               ""
             )}
@@ -55,6 +57,22 @@ function Header() {
           </p>
         </div>
       </div>
+      <AnimatePresence>
+        {isMenuOpen && (
+          <motion.div
+            initial={{ x: "-100%" }} // Slide in from the left
+            animate={{ x: 0 }} // Slide to original position
+            exit={{ x: "-100%" }} // Slide out to the left
+            transition={{
+              duration: 0.5, // Adjust the duration of the transition
+              ease: "easeInOut", // Ease transition
+            }}
+            className="h-screen max-h-screen fixed top-0 left-0 right-0 bottom-0 z-40"
+          >
+            <MobileMenu setPopup={setIsMenuOpen} />
+          </motion.div>
+        )}
+      </AnimatePresence>
     </header>
   );
 }

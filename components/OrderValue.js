@@ -84,7 +84,7 @@ function OrderValue({ data }) {
               {Math.abs(data?.percentageDifference)}%
             </p>
           </div>
-          <div className="flex gap-5 items-center">
+          <div className="flex flex-col md:flex-row gap-3 md:gap-5 md:items-center">
             <div className="flex gap-2 items-center">
               <TbCircleFilled
                 className="p-0.5 rounded-full bg-[#6366F1] "
